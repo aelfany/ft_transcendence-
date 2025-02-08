@@ -245,11 +245,7 @@ class SocialAuth(APIView):
     def post(self,request):
         try:
             platform = request.data['platform']
-            if platform == 'github':
-                client_id = settings.GITHUB_CLIENT_ID
-                redirect_uri = settings.GITHUB_REDIRECT_URI
-                url = f'https://github.com/login/oauth/authorize?client_id={client_id}&redirect_uri={redirect_uri}&scope=user:email'
-            elif platform == "42":
+            if platform == "42":
                 client_id = settings.CLIENT_ID
                 redirect_uri = settings.INTRA_REDIRECT_URI
                 url = f'https://api.intra.42.fr/oauth/authorize?client_id={client_id}&redirect_uri={redirect_uri}&response_type=code'
@@ -263,30 +259,18 @@ class SocialAuthverify(APIView):
     def get(self, request):
         try:
             headers = {'Accept': 'application/json'}
-            platform = request.GET.get('platform')
             code = request.GET.get('code')
-            if not platform and not code:
-                raise AuthenticationFailed('platform and code are required')
-            if platform:
-                platform = platform.strip().lower()
-                if platform == 'github':
-                    url = 'https://github.com/login/oauth/access_token'
-                    data = {
-                    'client_id': settings.GITHUB_CLIENT_ID,
-                    'client_secret': settings.GITHUB_CLIENT_SECRET,
+            if not code:
+                raise AuthenticationFailed('code is required')
+            url = 'https://api.intra.42.fr/oauth/token'
+            data = {    
+                    'grant_type': 'authorization_code',
+                    'client_id': settings.CLIENT_ID,
+                    'client_secret': settings.CLIENT_SECRET,
                     'code': code,
-                    'redirect_uri': settings.GITHUB_REDIRECT_URI
-                    }
-            else:
-                url = 'https://api.intra.42.fr/oauth/token'
-                data = {    
-                        'grant_type': 'authorization_code',
-                        'client_id': settings.CLIENT_ID,
-                        'client_secret': settings.CLIENT_SECRET,
-                        'code': code,
-                        'redirect_uri': settings.INTRA_REDIRECT_URI
-                    }
-                platform = '42'
+                    'redirect_uri': settings.INTRA_REDIRECT_URI
+                }
+            platform = '42'
             response = requests.post(url, data=data, headers=headers, timeout=10000)
             response.raise_for_status()
             access_token = response.json()['access_token']
@@ -489,8 +473,8 @@ class BlockUser(APIView):
                 }
             )
             return Response({'info':'user blocked'},status=200)
-        except User.DoesNotExist:
-            return Response({'info':'user Dose Not exsiste'},status=400)
+        except Exception as e:
+            return Response({'info':e},status=400)
     
     def delete(self,request):
         try:

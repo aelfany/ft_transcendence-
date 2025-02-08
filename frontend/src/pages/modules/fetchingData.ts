@@ -13,6 +13,7 @@ import { NotificationsDataType } from "@/src/customDataTypes/NotificationsDataTy
 import { w3cwebsocket } from "websocket";
 import { closeSocket } from "./closeSocket";
 import refreshToken from "@/src/services/hooks/refreshToken";
+import { FriendsDataType } from "@/src/customDataTypes/FriendsDataType";
 
 export const sendFriendRequest = (username: string) => {
   axiosPrivate
@@ -165,6 +166,13 @@ export const blockUser = (username: string) => {
             : user;
         })
       );
+      setFriendsData(
+        store.getState().friends.value.map((user: FriendsDataType) => {
+          return user.username === username
+            ? { ...user, is_blocked: true }
+            : user;
+        })
+      );
     })
     .catch((err) => {
       if (err.name === "CanceledError") return;
@@ -177,6 +185,13 @@ export const unblockUser = (username: string) => {
     .then(() => {
       setAllUsersData(
         store.getState().allUsers.value.map((user: AllUsersDataType) => {
+          return user.username === username
+            ? { ...user, is_blocked: false }
+            : user;
+        })
+      );
+      setFriendsData(
+        store.getState().friends.value.map((user: FriendsDataType) => {
           return user.username === username
             ? { ...user, is_blocked: false }
             : user;

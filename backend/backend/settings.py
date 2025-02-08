@@ -26,6 +26,8 @@ ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS','*').split(',')
 
 DEBUG = False
 
+APPEND_SLASH = True
+
 # Application definition
 INSTALLED_APPS = [
     'daphne',
@@ -166,7 +168,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(
-        minutes=20  
+        minutes=90  
     ),
     'REFRESH_TOKEN_LIFETIME': timedelta(
         days=7

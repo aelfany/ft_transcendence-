@@ -23,7 +23,7 @@
     column-gap: 1em;
     width: 100%;
   }
-  span[class*="error-message"] {
+  span[class~="error-message"] {
     /* background-color: yellow; */
     margin: 0px !important;
     padding: 0px !important;
@@ -33,7 +33,7 @@
   }
 }
 
-.settingProfile div[class*="first-last-name"] {
+.settingProfile div[class~="first-last-name"] {
   > div {
     display: flex;
     flex-direction: column;
@@ -43,7 +43,7 @@
   }
 }
 
-.settingProfile div[class*="email-username"] {
+.settingProfile div[class~="email-username"] {
   > div {
     display: flex;
     flex-direction: column;
@@ -57,7 +57,7 @@
   }
 }
 
-.settingProfile div[class*="profile-img-update"] {
+.settingProfile div[class~="profile-img-update"] {
   max-width: 100%;
   label {
     position: relative;
@@ -73,7 +73,7 @@
     width: clamp(22em, 10em + 20vw, 30em);
     min-height: fit-content;
   }
-  div[class*="file-icon"] {
+  div[class~="file-icon"] {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,7 +84,7 @@
     padding: 0.3em;
     border-radius: 100%;
   }
-  div[class*="file-text"] {
+  div[class~="file-text"] {
     font-family: "DM Sans";
     font-size: 0.8em;
     font-weight: 500;

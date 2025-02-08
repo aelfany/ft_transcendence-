@@ -7,18 +7,33 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/src/states/store";
 
 const LeaderBordInGame = () => {
-  const [leaderBoardData, setLeaderBoardData] = useState<UserDataType[] | undefined>(undefined);
+  const [leaderBoardData, setLeaderBoardData] = useState<
+    UserDataType[] | undefined
+  >(undefined);
   const userData = useSelector((state: RootState) => state.user.value);
   useEffect(() => {
     const fetchLeaderBoardData = async () => {
       try {
         const res = await axiosPrivate.get("leaderboard");
-        if (res.data)
-          setLeaderBoardData(res.data);
+        while (res.data.length < 6) {
+          (res.data as UserDataType[]).push({
+            avatar: undefined,
+            username: "",
+            score: 0,
+            level: 0,
+            medal: undefined,
+            email: "",
+            created_at: "",
+            is2fa: false,
+            is_online: false,
+            is_blocked: false,
+          });
+        }
+        setLeaderBoardData(res.data);
       } catch (err) {
-        setLeaderBoardData(undefined)
+        setLeaderBoardData(undefined);
       }
-    }
+    };
     if (!leaderBoardData) fetchLeaderBoardData();
   }, [userData, leaderBoardData]);
 
@@ -42,42 +57,46 @@ const LeaderBordInGame = () => {
                 <td colSpan={6}> No data in Leader board!!</td>
               </tr>
             ) : (
-              leaderBoardData.map((player, index) =>
-                index < 6 ? (
-                  <tr key={index} className="">
-                    <th scope="col" className="">
-                      {Number(index) + 1}
-                    </th>
-                    <td className="user-image-container">
-                      <img
-                        src={
-                          player.avatar
-                            ? process.env.VITE_BACKEND_API_URL + "" + player.avatar
-                            : profileIcon
-                        }
-                        className="user-image"
-                        alt="user image"
-                      />
-                    </td>
-                    <td className="username">{player.username}</td>
-                    <td className="score">{player.score}xp</td>
-                    <td className="level">{player.level}</td>
-                    <td className="">
-                      <img
-                        src={
-                          player.medal
-                            ? "/assets/icons/" + player.medal + ".svg"
-                            : selverMedalLevel1Icon
-                        }
-                        className="medal-image"
-                        alt="medal image"
-                      />
-                    </td>
-                  </tr>
-                ) : (
-                  <tr key={index} className="d-none"></tr>
-                )
-              )
+              leaderBoardData.map((player, index) => (
+                <tr key={index} className="">
+                  <th scope="col" className={player.username === "" ? "invisible" : ""}>
+                    {Number(index) + 1}
+                  </th>
+                  {player.username !== "" ? (
+                    <>
+                      <td className="user-image-container">
+                        <img
+                          src={
+                            player.avatar
+                              ? process.env.VITE_BACKEND_API_URL +
+                                "" +
+                                player.avatar
+                              : profileIcon
+                          }
+                          className="user-image"
+                          alt="user image"
+                        />
+                      </td>
+                      <td className="username">{player.username}</td>
+                      <td className="score">{player.score}xp</td>
+                      <td className="level">{player.level}</td>
+                      <td className="">
+                        <img
+                          src={
+                            player.medal
+                              ? "/assets/icons/" + player.medal + ".svg"
+                              : selverMedalLevel1Icon
+                          }
+                          className="medal-image"
+                          alt="medal image"
+                        />
+                      </td>
+                    </>
+                  ) : 
+                  ""
+                  }
+                </tr>
+              ))
             )}
           </tbody>
         </table>

@@ -58,10 +58,7 @@ services:
 
 volumes:
   postgres_data:
-  static:
-  media:
 
 networks:
   transcendence_network:
     driver: bridge
-

@@ -16,6 +16,7 @@ import { useSelector } from "react-redux";
 import { axiosPrivate } from "@/src/services/api/axios";
 import { UserDataType } from "@/src/customDataTypes/UserDataType";
 import { FriendsDataType } from "@/src/customDataTypes/FriendsDataType";
+import { toast } from "react-toastify";
 
 const MessageSchema = z.object({
   textMessage: z
@@ -78,7 +79,7 @@ const FormComponent = () => {
   return (
     <>
       <form className="sendMessageField" onSubmit={handleSubmit(onSubmit)}>
-        <span className="">
+        <span className="invisible">
           <SlEmotsmile size={30} />
         </span>
         <input
@@ -111,7 +112,10 @@ const ChatArea = () => {
         .post("search_username", { username: userName })
         .then((res) => {
           if (res.data?.error === "User matching query does not exist.")
-            navigate("/noPageWithThisRout", { replace: true });
+          {
+            toast.error("Error : no user with the username provided",{containerId:"validation", toastId: res.data.error + "chat"})
+            navigate("/chat", {replace: true});
+          }
           chatContext.setUserData(res.data);
         })
         .catch((err) => {

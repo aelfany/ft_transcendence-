@@ -10,7 +10,7 @@
     overflow-y: hidden;
 }
 
-.game main[class*="game-container"] {
+.game main[class~="game-container"] {
     display: grid;
     position: relative;
     grid-template-rows: 1fr;
@@ -21,7 +21,7 @@
     color: white;
 
 
-    section[class*="searchFriends-pongPlayer-gameMode-leaderBoard-container"] {
+    section[class~="searchFriends-pongPlayer-gameMode-leaderBoard-container"] {
         /* background-color: rgb(50, 199, 199); */
         display: grid;
         grid-template-rows: repeat(26fr);
@@ -53,18 +53,18 @@
             "leaderBoard-container"
         ;
 
-        div[class*="searchFriends-container"] {
+        div[class~="searchFriends-container"] {
             /* background-color: red; */
             grid-area: searchFriends-container;
         }
 
-        div[class*="pongPlayer-container"] {
+        div[class~="pongPlayer-container"] {
             /* background-color: rgb(212, 212, 64); */
             grid-area: pongPlayer-container;
 
         }
 
-        div[class*="gameMode-container"] {
+        div[class~="gameMode-container"] {
             /* background-color: rgb(11, 60, 104); */
             grid-area: gameMode-container;
             display: flex;
@@ -72,21 +72,21 @@
             width: 95%;
         }
 
-        div[class*="leaderBoard-container"] {
+        div[class~="leaderBoard-container"] {
             /* background-color: rgb(205, 125, 27); */
             grid-area: leaderBoard-container;
 
         }
     }
 
-    section[class*="profile-recentGames-container"] {
+    section[class~="profile-recentGames-container"] {
         /* background-color: rgb(243, 226, 204); */
         display: grid;
         grid-template-rows: repeat(26fr);
         grid-template-columns: 1fr;
         grid-template-areas:
             "none"
-            "profile-container"
+            "none"
             "profile-container"
             "profile-container"
             "profile-container"
@@ -111,13 +111,13 @@
             "recentGames-container"
         ;
 
-        div[class*="profile-container"] {
+        div[class~="profile-container"] {
             /* background-color: rgb(136, 119, 119); */
             backdrop-filter: "blur(4px)";
             grid-area: profile-container;
         }
 
-        div[class*="recentGames-container"] {
+        div[class~="recentGames-container"] {
             grid-area: recentGames-container;
         }
     }
@@ -130,8 +130,8 @@
 */
 @media screen and (max-width: 1100px) {
     .game {
-        section[class*="profile-recentGames-container"] {
-            div[class*="profile-container"] {
+        section[class~="profile-recentGames-container"] {
+            div[class~="profile-container"] {
                 /* background-color: aqua; */
                 >div{
                     /* height: fit-content;

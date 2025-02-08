@@ -15,8 +15,8 @@ def print_stack():
         print(f"Function: {frame.function}, File: {frame.filename}, Line: {frame.lineno}")
 
 class User(AbstractBaseUser):
-    first_name = models.CharField(max_length=25,blank=True)
-    last_name = models.CharField(max_length=25,blank=True)
+    first_name = models.CharField(max_length=25)
+    last_name = models.CharField(max_length=25)
     username = models.CharField(max_length=20,unique=True)
     email = models.EmailField(max_length=255,unique=True)
     password = models.CharField(max_length=255)

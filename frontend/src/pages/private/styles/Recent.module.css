@@ -23,12 +23,12 @@
     line-height: 1em;
     padding: 0px;
 }
-.recent span[class*="win"]
+.recent span[class~="win"]
 {
     color: greenyellow;
 }
 
-.recent span[class*="lose"]
+.recent span[class~="lose"]
 {
     color: red;
 }

@@ -1,10 +1,25 @@
 import refreshToken from "@/src/services/hooks/refreshToken";
 import { RootState } from "@/src/states/store";
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Cookies from "js-cookie";
-import { setUnAuthenticatedData } from "./pages/modules/setAuthenticationData";
+import {
+  setUnAuthenticatedData,
+  setUserData,
+} from "./pages/modules/setAuthenticationData";
 import { useAxiosPrivate } from "./services/hooks/useAxiosPrivate";
+import { axiosPrivate } from "./services/api/axios";
+
+const getUsersInfo = async () => {
+  await axiosPrivate
+    .get("user_info")
+    .then((res) => {
+      setUserData(res.data);
+    })
+    .catch((err) => {
+      if (err.name === "CanceledError") return;
+    });
+};
 
 interface PersistLoginProps {
   children: any;
@@ -20,6 +35,10 @@ const PersistLogin = ({ children }: PersistLoginProps) => {
   const isAuthenticated = useSelector(
     (state: RootState) => state.authenticator.value
   );
+
+  useEffect(() => {
+    if (isAuthenticated) getUsersInfo();
+  }, [isAuthenticated]);
 
   useLayoutEffect(() => {
     let isMounted = true;

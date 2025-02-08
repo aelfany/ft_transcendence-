@@ -38,7 +38,7 @@ const UsersChatCard = ({conversations} : {conversations:ConversationListDataType
   return (
     <>
       <div
-        className="tab-pane active"
+        className="tab-pane"
         id="all-msgs-content"
         role="tabpanel"
         aria-labelledby="all-msgs"

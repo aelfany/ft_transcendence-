@@ -24,7 +24,7 @@ type PlayerInfoProps = {
 const NameAndImageIcon = ({ player, isWinner }: PlayerInfoProps) => {
   return isWinner ? (
     <div className="winner">
-      <div className="user-image">
+      <div className={`user-image ${player.avatar === "" ? "invisible" : ""}`}>
         <img
           src={
             player.avatar
@@ -32,21 +32,21 @@ const NameAndImageIcon = ({ player, isWinner }: PlayerInfoProps) => {
               : profileIcon
           }
           alt="playerIcon"
-          className="bg-success"
+          className={`bg-success ${player.avatar === "" ? "invisible" : ""}`}
         />
       </div>
-      <div className="user-name" title={player.name}>
+      <div className={`user-name ${player.name === "" ? "invisible" : ""}`} title={player.name}>
         {player.name.length > 8 && player.name.substring(0, 6).concat("...")}
         {player.name.length <= 8 && player.name}
       </div>
     </div>
   ) : (
     <div className="loser">
-      <div className="user-name" title={player.name}>
+      <div className={`user-name ${player.name === "" ? "invisible" : ""}`} title={player.name}>
         {player.name.length > 8 && player.name.substring(0, 6).concat("...")}
         {player.name.length <= 8 && player.name}
       </div>
-      <div className="user-image">
+      <div className={`user-image ${player.avatar === "" ? "invisible" : ""}`}>
         <img
           src={
             player.avatar
@@ -54,7 +54,7 @@ const NameAndImageIcon = ({ player, isWinner }: PlayerInfoProps) => {
               : profileIcon
           }
           alt="playerIcon"
-          className=""
+          className={`bg-success ${player.avatar === "" ? "invisible" : ""}`}
         />
       </div>
     </div>
@@ -68,6 +68,26 @@ const RecentInGame = () => {
     const fetchrecentGames = async () => {
       try {
         const res = await axiosPrivate.get("recent_games");
+        while (res.data.length < 10) {
+          res.data.push({
+            player1: {
+              name: "",
+              avatar: "",
+              scored: 0,
+              winner: "",
+              loser: "",
+              type: "pong",
+            },
+            player2: {
+              name: "",
+              avatar: "",
+              scored: 0,
+              winner: "",
+              loser: "",
+              type: "pong",
+            },
+          });
+        }
         if (res.data) setRecentGames(res.data);
       } catch (err) {
         setRecentGames(undefined);
@@ -86,42 +106,38 @@ const RecentInGame = () => {
               <div className="h4 text-warning"> No matches yet</div>
             ))}
           {recentGames &&
-            recentGames?.map((match, index) =>
-              index < 10 ? (
-                <div key={index} className={gameRecentInGameImageAndName}>
-                  <>
-                    <NameAndImageIcon
-                      player={
-                        match.player1.name === match.player1.winner
-                          ? match.player1
-                          : match.player2
+            recentGames?.map((match, index) => (
+              <div key={index} className={gameRecentInGameImageAndName}>
+                <>
+                  <NameAndImageIcon
+                    player={
+                      match.player1.name === match.player1.winner
+                        ? match.player1
+                        : match.player2
+                    }
+                    isWinner={true}
+                  />
+                  <div className={`vs-container ${match.player1.name === "" ? "invisible" : ""}`}>
+                    <img
+                      src={
+                        match.player1.type === "pong"
+                          ? PingPongLogoIcon
+                          : rocketLeageLogoIcon
                       }
-                      isWinner={true}
+                      alt=""
                     />
-                    <div className="vs-container">
-                      <img
-                        src={
-                          match.player1.type === "pong"
-                            ? PingPongLogoIcon
-                            : rocketLeageLogoIcon
-                        }
-                        alt=""
-                      />
-                    </div>
-                    <NameAndImageIcon
-                      player={
-                        match.player1.name === match.player1.loser
-                          ? match.player1
-                          : match.player2
-                      }
-                      isWinner={false}
-                    />
-                  </>
-                </div>
-              ) : (
-                <span key={index}></span>
-              )
-            )}
+                  </div>
+                  <NameAndImageIcon
+                    player={
+                      match.player1.name === match.player1.loser
+                        ? match.player1
+                        : match.player2
+                    }
+                    isWinner={false}
+                  />
+                </>
+              </div>
+            ))}
         </div>
       </div>
     </>

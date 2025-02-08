@@ -26,22 +26,22 @@
     cursor: grabbing;
   }
 
-  div[class*="notification-message-reject-accept"] {
+  div[class~="notification-message-reject-accept"] {
     display: flex;
     flex-direction: row;
-    div[class*="notification-message"] {
+    div[class~="notification-message"] {
       padding: 0.9em;
       padding-inline: 1.2em;
       flex-grow: 1;
     }
-    div[class*="notification-reject-accept"] {
+    div[class~="notification-reject-accept"] {
       border-left: 1px black solid;
-      div[class*="notification-reject"] {
+      div[class~="notification-reject"] {
         padding: 0.5em;
         border-bottom: 1px black solid;
         cursor: pointer;
       }
-      div[class*="notification-accept"] {
+      div[class~="notification-accept"] {
         padding: 0.5em;
         cursor: pointer;
       }

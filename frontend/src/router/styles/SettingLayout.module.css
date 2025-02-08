@@ -8,7 +8,8 @@
    width: 95%;
 }
 
-.settingLayout div[class*="input-field"] {
+.settingLayout div[class~="input-field"] {
+   visibility: hidden;
    display: flex;
    flex: row nowrap;
    align-items: center;
@@ -24,7 +25,7 @@
    label {
       margin-left: 0.2em;
 
-      *[class*="search-add-on"] {
+      *[class~="search-add-on"] {
          width: 2em;
       }
    }
@@ -49,20 +50,20 @@
    }
 }
 
-.settingLayout section[class*="sectionOfSetting"] {
+.settingLayout section[class~="sectionOfSetting"] {
    flex-grow: 1;
    display: flex;
    flex-direction: column;
    width: 100%;
    height: 90%;
 
-   div[class*="user-background-image"] {
+   div[class~="user-background-image"] {
       --user-img-width: clamp(6em, 4em + 5vw, 12em);
       --background-img-height: 68%;
       position: relative;
       height: calc(10% + 8vw);
 
-      div[class*="background-img"] {
+      div[class~="background-img"] {
          background-color: rgb(80, 51, 80);
          height: var(--background-img-height);
 
@@ -72,7 +73,7 @@
          }
       }
 
-      div[class*="user-image"] {
+      div[class~="user-image"] {
          position: absolute;
          width: var(--user-img-width);
          top: calc(var(--background-img-height) - calc(var(--user-img-width) / 2));
@@ -89,12 +90,12 @@
       }
    }
 
-   div[class*="setting-routes-outlets"] {
+   div[class~="setting-routes-outlets"] {
       display: flex;
       flex-direction: column;
       flex-grow: 1;
 
-      div[class*="setting-routes"] {
+      div[class~="setting-routes"] {
          display: flex;
          flex-direction: row;
          column-gap: 2em;
@@ -107,12 +108,12 @@
             font-size: clamp(0.8em, 0.5em + 0.7vw, 2em);
          }
 
-         a[class*="active"] {
+         a[class~="active"] {
             color: rgba(82, 0, 255, 1);
          }
       }
 
-      div[class*="setting-outlets"] {
+      div[class~="setting-outlets"] {
          flex-grow: 1;
       }
    }

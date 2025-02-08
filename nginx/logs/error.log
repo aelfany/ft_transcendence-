@@ -1,0 +1,150 @@
+2025/02/08 16:15:06 [notice] 1#1: using the "epoll" event method
+2025/02/08 16:15:06 [notice] 1#1: nginx/1.27.4
+2025/02/08 16:15:06 [notice] 1#1: built by gcc 14.2.0 (Alpine 14.2.0) 
+2025/02/08 16:15:06 [notice] 1#1: OS: Linux 5.15.49-linuxkit
+2025/02/08 16:15:06 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/02/08 16:15:06 [notice] 1#1: start worker processes
+2025/02/08 16:15:06 [notice] 1#1: start worker process 20
+2025/02/08 16:15:06 [notice] 1#1: start worker process 21
+2025/02/08 16:15:55 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2025/02/08 16:15:55 [notice] 21#21: gracefully shutting down
+2025/02/08 16:15:55 [notice] 21#21: exiting
+2025/02/08 16:15:55 [notice] 20#20: gracefully shutting down
+2025/02/08 16:15:55 [notice] 21#21: exit
+2025/02/08 16:15:55 [notice] 20#20: exiting
+2025/02/08 16:15:55 [notice] 20#20: exit
+2025/02/08 16:15:55 [notice] 1#1: signal 17 (SIGCHLD) received from 21
+2025/02/08 16:15:55 [notice] 1#1: worker process 20 exited with code 0
+2025/02/08 16:15:55 [notice] 1#1: worker process 21 exited with code 0
+2025/02/08 16:15:55 [notice] 1#1: exit
+2025/02/08 16:16:28 [notice] 1#1: using the "epoll" event method
+2025/02/08 16:16:28 [notice] 1#1: nginx/1.27.4
+2025/02/08 16:16:28 [notice] 1#1: built by gcc 14.2.0 (Alpine 14.2.0) 
+2025/02/08 16:16:28 [notice] 1#1: OS: Linux 5.15.49-linuxkit
+2025/02/08 16:16:28 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/02/08 16:16:28 [notice] 1#1: start worker processes
+2025/02/08 16:16:28 [notice] 1#1: start worker process 20
+2025/02/08 16:16:28 [notice] 1#1: start worker process 21
+2025/02/08 16:16:30 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2025/02/08 16:16:30 [notice] 20#20: gracefully shutting down
+2025/02/08 16:16:30 [notice] 21#21: gracefully shutting down
+2025/02/08 16:16:30 [notice] 20#20: exiting
+2025/02/08 16:16:30 [notice] 21#21: exiting
+2025/02/08 16:16:30 [notice] 20#20: exit
+2025/02/08 16:16:30 [notice] 21#21: exit
+2025/02/08 16:16:30 [notice] 1#1: signal 17 (SIGCHLD) received from 21
+2025/02/08 16:16:30 [notice] 1#1: worker process 21 exited with code 0
+2025/02/08 16:16:30 [notice] 1#1: signal 29 (SIGIO) received
+2025/02/08 16:16:30 [notice] 1#1: signal 17 (SIGCHLD) received from 20
+2025/02/08 16:16:30 [notice] 1#1: worker process 20 exited with code 0
+2025/02/08 16:16:30 [notice] 1#1: exit
+2025/02/08 16:16:52 [notice] 1#1: using the "epoll" event method
+2025/02/08 16:16:52 [notice] 1#1: nginx/1.27.4
+2025/02/08 16:16:52 [notice] 1#1: built by gcc 14.2.0 (Alpine 14.2.0) 
+2025/02/08 16:16:52 [notice] 1#1: OS: Linux 5.15.49-linuxkit
+2025/02/08 16:16:52 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/02/08 16:16:52 [notice] 1#1: start worker processes
+2025/02/08 16:16:52 [notice] 1#1: start worker process 20
+2025/02/08 16:16:52 [notice] 1#1: start worker process 21
+2025/02/08 16:17:10 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2025/02/08 16:17:10 [notice] 20#20: gracefully shutting down
+2025/02/08 16:17:10 [notice] 20#20: exiting
+2025/02/08 16:17:10 [notice] 21#21: gracefully shutting down
+2025/02/08 16:17:10 [notice] 20#20: exit
+2025/02/08 16:17:10 [notice] 21#21: exiting
+2025/02/08 16:17:10 [notice] 21#21: exit
+2025/02/08 16:17:10 [notice] 1#1: signal 17 (SIGCHLD) received from 20
+2025/02/08 16:17:10 [notice] 1#1: worker process 20 exited with code 0
+2025/02/08 16:17:10 [notice] 1#1: signal 29 (SIGIO) received
+2025/02/08 16:17:10 [notice] 1#1: signal 17 (SIGCHLD) received from 21
+2025/02/08 16:17:10 [notice] 1#1: worker process 21 exited with code 0
+2025/02/08 16:17:10 [notice] 1#1: exit
+2025/02/08 16:17:18 [notice] 1#1: using the "epoll" event method
+2025/02/08 16:17:18 [notice] 1#1: nginx/1.27.4
+2025/02/08 16:17:18 [notice] 1#1: built by gcc 14.2.0 (Alpine 14.2.0) 
+2025/02/08 16:17:18 [notice] 1#1: OS: Linux 5.15.49-linuxkit
+2025/02/08 16:17:18 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/02/08 16:17:18 [notice] 1#1: start worker processes
+2025/02/08 16:17:18 [notice] 1#1: start worker process 19
+2025/02/08 16:17:18 [notice] 1#1: start worker process 20
+2025/02/08 16:21:01 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2025/02/08 16:21:01 [notice] 20#20: gracefully shutting down
+2025/02/08 16:21:01 [notice] 20#20: exiting
+2025/02/08 16:21:01 [notice] 19#19: gracefully shutting down
+2025/02/08 16:21:01 [notice] 20#20: exit
+2025/02/08 16:21:01 [notice] 19#19: exiting
+2025/02/08 16:21:01 [notice] 19#19: exit
+2025/02/08 16:21:01 [notice] 1#1: signal 17 (SIGCHLD) received from 20
+2025/02/08 16:21:01 [notice] 1#1: worker process 20 exited with code 0
+2025/02/08 16:21:01 [notice] 1#1: signal 29 (SIGIO) received
+2025/02/08 16:21:01 [notice] 1#1: signal 17 (SIGCHLD) received from 19
+2025/02/08 16:21:01 [notice] 1#1: worker process 19 exited with code 0
+2025/02/08 16:21:01 [notice] 1#1: exit
+2025/02/08 16:21:10 [notice] 1#1: using the "epoll" event method
+2025/02/08 16:21:10 [notice] 1#1: nginx/1.27.4
+2025/02/08 16:21:10 [notice] 1#1: built by gcc 14.2.0 (Alpine 14.2.0) 
+2025/02/08 16:21:10 [notice] 1#1: OS: Linux 5.15.49-linuxkit
+2025/02/08 16:21:10 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/02/08 16:21:10 [notice] 1#1: start worker processes
+2025/02/08 16:21:10 [notice] 1#1: start worker process 21
+2025/02/08 16:21:10 [notice] 1#1: start worker process 22
+2025/02/08 16:26:23 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2025/02/08 16:26:23 [notice] 22#22: gracefully shutting down
+2025/02/08 16:26:23 [notice] 21#21: gracefully shutting down
+2025/02/08 16:26:23 [notice] 21#21: exiting
+2025/02/08 16:26:23 [notice] 21#21: exit
+2025/02/08 16:26:23 [notice] 1#1: signal 17 (SIGCHLD) received from 21
+2025/02/08 16:26:23 [notice] 1#1: worker process 21 exited with code 0
+2025/02/08 16:26:23 [notice] 1#1: signal 29 (SIGIO) received
+2025/02/08 16:26:30 [notice] 1#1: using the "epoll" event method
+2025/02/08 16:26:30 [notice] 1#1: nginx/1.27.4
+2025/02/08 16:26:30 [notice] 1#1: built by gcc 14.2.0 (Alpine 14.2.0) 
+2025/02/08 16:26:30 [notice] 1#1: OS: Linux 5.15.49-linuxkit
+2025/02/08 16:26:30 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/02/08 16:26:30 [notice] 1#1: start worker processes
+2025/02/08 16:26:30 [notice] 1#1: start worker process 20
+2025/02/08 16:26:30 [notice] 1#1: start worker process 21
+2025/02/08 16:29:35 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2025/02/08 16:29:35 [notice] 21#21: gracefully shutting down
+2025/02/08 16:29:35 [notice] 20#20: gracefully shutting down
+2025/02/08 16:29:36 [notice] 21#21: exiting
+2025/02/08 16:29:36 [notice] 20#20: exiting
+2025/02/08 16:29:36 [notice] 21#21: exit
+2025/02/08 16:29:36 [notice] 20#20: exit
+2025/02/08 16:29:36 [notice] 1#1: signal 17 (SIGCHLD) received from 20
+2025/02/08 16:29:36 [notice] 1#1: worker process 20 exited with code 0
+2025/02/08 16:29:36 [notice] 1#1: worker process 21 exited with code 0
+2025/02/08 16:29:36 [notice] 1#1: exit
+2025/02/08 16:29:44 [notice] 1#1: using the "epoll" event method
+2025/02/08 16:29:44 [notice] 1#1: nginx/1.27.4
+2025/02/08 16:29:44 [notice] 1#1: built by gcc 14.2.0 (Alpine 14.2.0) 
+2025/02/08 16:29:44 [notice] 1#1: OS: Linux 5.15.49-linuxkit
+2025/02/08 16:29:44 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/02/08 16:29:44 [notice] 1#1: start worker processes
+2025/02/08 16:29:44 [notice] 1#1: start worker process 20
+2025/02/08 16:29:44 [notice] 1#1: start worker process 21
+2025/02/08 16:29:45 [error] 20#20: *3 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: ${server_name}, request: "POST /api/refresh_token HTTP/1.1", upstream: "http://172.18.0.3:8000/api/refresh_token", host: "10.13.1.16", referrer: "https://10.13.1.16/chat/qwert"
+2025/02/08 16:44:26 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2025/02/08 16:44:26 [notice] 20#20: gracefully shutting down
+2025/02/08 16:44:26 [notice] 21#21: gracefully shutting down
+2025/02/08 16:44:26 [notice] 20#20: exiting
+2025/02/08 16:44:26 [notice] 21#21: exiting
+2025/02/08 16:44:26 [notice] 20#20: exit
+2025/02/08 16:44:26 [notice] 21#21: exit
+2025/02/08 16:44:26 [notice] 1#1: signal 17 (SIGCHLD) received from 20
+2025/02/08 16:44:26 [notice] 1#1: worker process 20 exited with code 0
+2025/02/08 16:44:26 [notice] 1#1: signal 29 (SIGIO) received
+2025/02/08 16:44:26 [notice] 1#1: signal 17 (SIGCHLD) received from 21
+2025/02/08 16:44:26 [notice] 1#1: worker process 21 exited with code 0
+2025/02/08 16:44:26 [notice] 1#1: exit
+2025/02/08 16:44:34 [notice] 1#1: using the "epoll" event method
+2025/02/08 16:44:34 [notice] 1#1: nginx/1.27.4
+2025/02/08 16:44:34 [notice] 1#1: built by gcc 14.2.0 (Alpine 14.2.0) 
+2025/02/08 16:44:34 [notice] 1#1: OS: Linux 5.15.49-linuxkit
+2025/02/08 16:44:34 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/02/08 16:44:34 [notice] 1#1: start worker processes
+2025/02/08 16:44:34 [notice] 1#1: start worker process 20
+2025/02/08 16:44:34 [notice] 1#1: start worker process 21
+2025/02/08 16:52:20 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2025/02/08 16:52:20 [notice] 21#21: gracefully shutting down
+2025/02/08 16:52:20 [notice] 20#20: gracefully shutting down

@@ -2,7 +2,7 @@
     width: clamp(3em, 2em + 2vw, 5em);
 }
 
-.sidebar>div[class*="sidebar-content"] {
+.sidebar>div[class~="sidebar-content"] {
     display: flex;
     height: 100%;
     flex-direction: column;
@@ -13,7 +13,7 @@
     border-top-right-radius: 1.5em;
     overflow-y: auto;
     background: linear-gradient(#03062E 0%, #5F0A94 45.71%);
-    div[class*="brand-icon"] {
+    div[class~="brand-icon"] {
         padding: 0.5em;
         margin-top: 0.6em;
 
@@ -26,7 +26,7 @@
         margin-block: auto;
         width: 100%;
 
-        div[class*="link-icon"] {
+        div[class~="link-icon"] {
             height: fit-content;
             display: flex;
             align-items: center;
@@ -38,7 +38,7 @@
         }
     }
 
-    a[class*="active"] {
+    a[class~="active"] {
         >div {
             display: flex;
             align-items: center;

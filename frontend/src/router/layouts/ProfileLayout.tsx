@@ -8,6 +8,7 @@ import { RootState, store } from "@/src/states/store";
 import { useSelector } from "react-redux";
 import { UserDataType } from "@/src/customDataTypes/UserDataType";
 import { axiosPrivate } from "@/src/services/api/axios";
+import { toast } from "react-toastify";
 
 const ProfileLayout = () => {
   const { userName } = useParams();
@@ -22,7 +23,10 @@ const ProfileLayout = () => {
         })
         .then((res) => {
           if (res.data?.error === "User matching query does not exist.")
-            navigate("/noPageWithThisRout", {replace: true});
+          {
+            toast.error("Error : no user with the username provided",{containerId:"validation", toastId: res.data.error + "profile"})
+            navigate("/profile", {replace: true});
+          }
           setData(res.data);
         })
         .catch((err) => {
@@ -59,8 +63,8 @@ const ProfileLayout = () => {
             <Stats
               title={"TOURNAMENT STATS"}
               data={{
-                win: data.wins ? data.wins : 0,
-                lose: data.losses ? data.losses : 0,
+                win: 0,
+                lose: 0,
               }}
             />
           </div>

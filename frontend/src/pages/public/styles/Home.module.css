@@ -23,7 +23,7 @@
     background-position-y: 30em;
     background-position-x: 0em;
 
-    div[class*="pingPongVector"] {
+    div[class~="pingPongVector"] {
         overflow-y: hidden;
         overflow-x: hidden;
         position: absolute;
@@ -41,14 +41,14 @@
         filter: blur(1.5px);
     }
 
-    section[class*="section-header-paragraph-ping-animation"] {
+    section[class~="section-header-paragraph-ping-animation"] {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         height: fit-content;
         z-index: 0;
 
-        div[class*="header-paragraph"] {
+        div[class~="header-paragraph"] {
             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
@@ -57,7 +57,7 @@
             height: fit-content;
             width: 50%;
 
-            div[class*="header-text"] {
+            div[class~="header-text"] {
                 height: fit-content;
                 font-family: var(--font-luckiestGuy);
                 font-size: clamp(1.5em, 1em + 4vw, 10em);
@@ -66,23 +66,23 @@
                 >span {
                     word-break: keep-all;
 
-                    span[class*="ping"] {
+                    span[class~="ping"] {
                         color: rgba(176, 113, 227, 1);
                     }
 
-                    span[class*="pong"] {
+                    span[class~="pong"] {
                         color: rgba(228, 169, 91, 1);
                     }
                 }
             }
 
-            div[class*="paragraph-text"] {
+            div[class~="paragraph-text"] {
                 font-family: "Hiragino Maru Gothic ProN";
                 font-size: clamp(0.5em, 0.5em + 0.5vw, 3em);
             }
         }
 
-        div[class*="ping-animation"] {
+        div[class~="ping-animation"] {
             flex-grow: 1;
             padding-inline: 1em;
             border: 8px solid;
@@ -90,13 +90,13 @@
             border-image-slice: 1;
             background: rgba(124, 85, 119, 1);
 
-            div[class*="ping-table"] {
+            div[class~="ping-table"] {
                 position: relative;
                 display: flex;
                 flex-direction: row;
                 height: 100%;
 
-                div[class*="left-bar"] {
+                div[class~="left-bar"] {
                     background-color: rgba(50, 8, 98, 1);
                     border: 1px solid rgba(255, 0, 0, 1);
                     position: relative;
@@ -109,7 +109,7 @@
                     animation-iteration-count: infinite;
                 }
 
-                div[class*="right-bar"] {
+                div[class~="right-bar"] {
                     background-color: rgba(50, 8, 98, 1);
                     border: 1px solid rgba(255, 0, 0, 1);
                     position: relative;
@@ -122,7 +122,7 @@
                     animation-iteration-count: infinite;
                 }
 
-                div[class*="ping-ball"] {
+                div[class~="ping-ball"] {
                     background-color: white;
                     position: absolute;
                     box-shadow: 0px 0px 200px 40px white;
@@ -135,7 +135,7 @@
                     animation-iteration-count: infinite;
                 }
 
-                div[class*="half-field"] {
+                div[class~="half-field"] {
                     background-color: rgba(50, 8, 98, 1);
                     position: absolute;
                     box-shadow: 0px 12px 15.2px 5px rgba(121, 0, 0, 0.25);
@@ -148,14 +148,14 @@
         }
     }
 
-    section[class*="section-video-sign-in-links"] {
+    section[class~="section-video-sign-in-links"] {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         z-index: 1;
 
-        div[class*="video-sign-in-links"] {
+        div[class~="video-sign-in-links"] {
             padding-bottom: clamp(1em, 0.5em + 1vw, 1.5em);
             display: flex;
             flex-direction: row;
@@ -190,12 +190,12 @@
                     white-space: nowrap;
                 }
 
-                a[class*="video-link"] {
+                a[class~="video-link"] {
                     white-space: nowrap;
                 }
             }
 
-            a[class*="sign-in-link"] {
+            a[class~="sign-in-link"] {
                 background-color: rgba(228, 169, 91, 1);
                 width: clamp(4em, 6em + 6vw, 10em);
                 padding-inline: 0.5em;
@@ -203,7 +203,7 @@
 
         }
 
-        div[class*="underline"] {
+        div[class~="underline"] {
             width: 50%;
             margin-top: 2em;
             border-bottom: rgb(255, 255, 255, 0.6) 0.2em solid;

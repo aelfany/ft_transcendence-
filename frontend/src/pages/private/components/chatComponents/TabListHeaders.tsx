@@ -8,7 +8,7 @@ const TabListHeaders = () => {
         <ul className={`nav nav-tabs forActiveLink ${chatTabListHeader}`} role="tablist">
             <li className="nav-item" role="presentation" id="chats">
               <Link
-                className="active"
+                className=""
                 id="all-msgs"
                 data-bs-toggle="tab"
                 to="#all-msgs-content"
@@ -21,7 +21,7 @@ const TabListHeaders = () => {
             </li>
             <li className="nav-item" role="presentation" id="unreadChats">
               <Link
-                className=""
+                className="active"
                 id="unread-msgs"
                 data-bs-toggle="tab"
                 to="#unread-msgs-content"

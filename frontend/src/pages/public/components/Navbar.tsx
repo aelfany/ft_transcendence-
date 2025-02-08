@@ -7,41 +7,41 @@ import logOut from "../../modules/logOut";
 
 const dropdownLinks: Links[] = [
   {
-    className: "py-2 mx-0",
+    className: "p-0 mx-0",
     link: (
-      <NavLink to="game" className="">
+      <NavLink to="game" className="w-100 d-flex align-items-center flex-grow-1 py-2 ps-5">
         game
       </NavLink>
     ),
   },
   {
-    className: "py-2 mx-0",
+    className: "p-0 mx-0",
     link: (
-      <NavLink to="profile" className="">
+      <NavLink to="profile" className="w-100 d-flex align-items-center flex-grow-1 py-2 ps-5">
         profile
       </NavLink>
     ),
   },
   {
-    className: "py-2 mx-0",
+    className: "p-0 mx-0",
     link: (
-      <NavLink to="chat" className="">
+      <NavLink to="chat" className="w-100 d-flex align-items-center flex-grow-1 py-2 ps-5">
         chat
       </NavLink>
     ),
   },
   {
-    className: "py-2 mx-0",
+    className: "p-0 mx-0",
     link: (
-      <NavLink to="setting" className="">
+      <NavLink to="setting" className="w-100 d-flex align-items-center flex-grow-1 py-2 ps-5">
         setting
       </NavLink>
     ),
   },
   {
-    className: "py-2 mx-0",
+    className: "p-0 mx-0",
     link: (
-      <button type="button" className="btn btn-danger" onClick={logOut}>
+      <button type="button" className="btn btn-danger w-100 d-flex align-items-center flex-grow-1 py-2 ps-5" onClick={logOut}>
         logout
       </button>
     ),
@@ -72,7 +72,7 @@ const Navbar = () => {
           {!isAuthenticated && (
             <NavLink
               style={{ width: "100px" }}
-              className="bg-success d-inline-flex rounded-pill py-1 px-3 mt-2 me-3"
+              className="bg-success d-inline-flex rounded-pill py-2 px-3 mt-2 me-3"
               to="/sign-up"
             >
               SIGN UP

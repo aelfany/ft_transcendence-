@@ -6,7 +6,7 @@
     min-height: fit-content;
 }
 
-.profileStats div[class*="title"] {
+.profileStats div[class~="title"] {
     display: flex;
     align-items: center;
     min-height: fit-content;
@@ -16,9 +16,9 @@
     font-size: clamp(0.7em, 0.7em + 1vw, 2em);
 }
 
-.profileStats div[class*="wins"],
-div[class*="matches"],
-div[class*="loses"] {
+.profileStats div[class~="wins"],
+div[class~="matches"],
+div[class~="loses"] {
     justify-content: space-between;
     align-items: center;
     font-size: clamp(0.5em, 0.4em + 1vw, 2em);
@@ -41,18 +41,18 @@ div[class*="loses"] {
     }
 }
 
-.profileStats div[class*="loses"]{
+.profileStats div[class~="loses"]{
     margin-bottom: 1em;
 }
 
 @media screen and (max-width: 800px) {
-    .profileStats div[class*="title"] {
+    .profileStats div[class~="title"] {
         margin-block:0px;
         font-size: clamp(0.8em, 0.8em + 2vw, 3em);
     }
-    .profileStats div[class*="wins"],
-    div[class*="matches"],
-    div[class*="loses"] {
+    .profileStats div[class~="wins"],
+    div[class~="matches"],
+    div[class~="loses"] {
         font-size: clamp(0.3em, 0.5em + 1.3vw, 2em);
     }
 }

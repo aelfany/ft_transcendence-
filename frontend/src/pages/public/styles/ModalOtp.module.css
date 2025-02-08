@@ -6,7 +6,7 @@
   max-width: fit-content;
   min-width: 25%;
   padding: 2px;
-  div[class*="modal-body"] {
+  div[class~="modal-body"] {
     border-radius: 23px;
     border-radius: inherit;
     > span {
@@ -19,7 +19,7 @@
       flex-direction: column;
 
       justify-content: space-between;
-      div[class*="otp-code"] {
+      div[class~="otp-code"] {
         display: flex;
         flex-direction: column;
         min-height: 5em;
@@ -28,7 +28,7 @@
           margin-top: 0.5em;
           margin-bottom: auto;
         }
-        div[class*="inputs-code"] {
+        div[class~="inputs-code"] {
           display: flex;
           flex: row no-wrap;
           justify-content: space-between;
@@ -51,30 +51,30 @@
           }
         }
       }
-      div[class*="submit-cancel-button"] {
+      div[class~="submit-cancel-button"] {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         font-family: var(--font-luckiestGuy);
 
-        input[class*="cancel"] {
+        input[class~="cancel"] {
           border-radius: 12px;
           font-size: 1.5em;
           padding-block: 0em;
           padding-inline: 0.5em;
         }
-        input[class*="cancel"]:hover {
+        input[class~="cancel"]:hover {
           background-color: rgb(255, 0, 0, 0.9);
           font-size: 1.2em;
           transition: 0.2s;
         }
-        input[class*="submit"] {
+        input[class~="submit"] {
           border-radius: 12px;
           font-size: 1.5em;
           padding-block: 0em;
           padding-inline: 0.5em;
         }
-        input[class*="submit"]:hover {
+        input[class~="submit"]:hover {
           background-color: rgb(0, 125, 0, 0.8);
           font-size: 1.75em;
           padding-block: 0px;

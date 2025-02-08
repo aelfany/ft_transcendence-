@@ -6,7 +6,7 @@
     width: 100%;
     height: 100%;
     /* background-color: yellow; */
-    div[class*="icon404"]{
+    div[class~="icon404"]{
         /* height: fit-content; */
         display: flex;
         justify-content: center;
@@ -24,7 +24,7 @@
             margin: 0px;
         }
     }
-    div[class*="text404"]{
+    div[class~="text404"]{
         color: white;
         display: flex;
         justify-content: center;

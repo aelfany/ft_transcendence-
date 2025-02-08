@@ -22,6 +22,9 @@
         align-items: center;
         margin-block:auto;
     }
+    li a[class~="active"]{
+        background: rgba(57, 30, 68, 1);
+    }
 }
 
 .chatTabListHeader [id="unreadChats"] {

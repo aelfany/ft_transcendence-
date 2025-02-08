@@ -34,7 +34,7 @@ return (
           </div>
         </div>
         <form
-          className="sendMessageField"
+          className="sendMessageField invisible"
           style={{ pointerEvents:"none"}}
         >
           <span className="">

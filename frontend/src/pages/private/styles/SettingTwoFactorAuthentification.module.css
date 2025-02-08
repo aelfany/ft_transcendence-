@@ -17,11 +17,11 @@
     border: 0px;
   }
 
-  > button[class*="two-factor-deactivation"] {
+  > button[class~="two-factor-deactivation"] {
     background-color: rgba(255, 0, 0, 0.7);
   }
 
-  > button[class*="two-factor-activation"] {
+  > button[class~="two-factor-activation"] {
     background-color: rgb(153, 255, 0, 0.8);
   }
 }
@@ -34,10 +34,10 @@ div[id*="qrModal"] {
   height: fit-content;
   margin-top: auto !important;
   margin-bottom: auto !important;
-  div[class*="qr-code"] {
+  div[class~="qr-code"] {
     width: fit-content;
     max-width: 100%;
-    div[class*="close-modal"] {
+    div[class~="close-modal"] {
       position: relative;
       width: fit-content;
       font-weight: 700;

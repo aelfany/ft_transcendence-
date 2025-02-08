@@ -45,7 +45,7 @@ const FriendsChatCard = () => {
   return (
     <>
       <div
-        className="tab-pane"
+        className="tab-pane active"
         id="unread-msgs-content"
         role="tabpanel"
         aria-labelledby="unread-msgs"

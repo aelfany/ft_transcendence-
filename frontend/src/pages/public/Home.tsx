@@ -45,7 +45,7 @@ const Home = () => {
           <div className="video-sign-in-links">
             <span className="">
               <ImFilm />
-              <Link to="#" className="video-link">
+              <Link to="https://www.youtube.com/watch?v=lwOwIBWkxl4" target="_blank" className="video-link">
                 WATCH VIDEO
               </Link>
             </span>

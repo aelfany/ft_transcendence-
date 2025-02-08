@@ -5,7 +5,6 @@ import { toast } from "react-toastify";
 import ModalComponent from "@/src/router/layouts/components/ModalComponent";
 import ModalOtp from "./ModalOtp";
 import Modal from "react-modal";
-import { useNavigate } from "react-router-dom";
 
 const customStyles: Modal.Styles | undefined = {
   content: {
@@ -21,16 +20,11 @@ const customStyles: Modal.Styles | undefined = {
   },
 };
 
-var first = true;
 const OAuth = () => {
   const [emailForOtp, setEmailForOtp] = useState<string>("");
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const navigate = useNavigate();
   useLayoutEffect(() => {
-    if (first) {
-      first = false;
-      handle42OauthCallback();
-    }
+    handle42OauthCallback();
   }, []);
   async function handle42OauthCallback() {
     const params = new URLSearchParams(window.location.search);
@@ -54,17 +48,12 @@ const OAuth = () => {
           autoClose: 7000,
           containerId: "validation",
         });
-        navigate("/sign-in", { replace: true });
+        window.location.replace("/sign-up");
+        window.location.href = "/sign-up";
       }
     } else {
-      toast.error(
-        "No code provided by 42 API please  check if you have permissions",
-        {
-          autoClose: 7000,
-          containerId: "validation",
-        }
-      );
-      navigate("/sign-in", { replace: true });
+      window.location.replace("/sign-up");
+      window.location.href = "/sign-up";
     }
   }
 

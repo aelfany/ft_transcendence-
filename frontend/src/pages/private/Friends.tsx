@@ -118,7 +118,7 @@ const Friends = () => {
                 <BsThreeDots size={30} color="white" />
               </div>
               <div className="dropdown-menu">
-                {friends.is_blocked ? (
+                {friend.is_blocked ? (
                   <div
                     className="block"
                     onClick={() => unblockUser(friend.username!)}

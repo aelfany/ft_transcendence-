@@ -27,7 +27,7 @@
         }
         
     }
-    svg[class*="profileVisibility"]{
+    svg[class~="profileVisibility"]{
         cursor:pointer;
         height: 100%;
         padding-inline:2px;
@@ -61,7 +61,7 @@
 }
 
 
-.chat div[class*="chatContent"] {
+.chat div[class~="chatContent"] {
     background-image: url(/assets/images/chatBackgroundImage.svg);
     background-size: 50%;
     border-bottom-right-radius: 20px;
@@ -76,7 +76,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    >div[class*="messagesArea"] {
+    >div[class~="messagesArea"] {
         padding: 0px !important;
         margin: 0px !important;
         height: 70% !important;
@@ -88,7 +88,7 @@
         /* background-color: red; */
     }
     
-    div[class*="default-chat-icon"]{
+    div[class~="default-chat-icon"]{
         width: 100%;
         height: 100%;
         display: flex;
@@ -96,7 +96,7 @@
         align-items: center;
     }
     
-    form[class*="sendMessageField"] {
+    form[class~="sendMessageField"] {
         background: rgba(217, 191, 255, 1);
 
         display: flex;

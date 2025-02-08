@@ -8,7 +8,7 @@
     color: #C144D5;
     height: 100%;
 
-    div[class*="pong-player-text-vector"] {
+    div[class~="pong-player-text-vector"] {
         display: flex;
         position: relative;
         border: 2px #D9D9D91A solid;
@@ -20,7 +20,7 @@
 
 
 
-        div[class*="user-welcoming-play-button"] {
+        div[class~="user-welcoming-play-button"] {
             display: flex;
             flex-direction: column;
             position: relative;
@@ -29,7 +29,7 @@
             margin-left: 1em;
             width: 100%;
 
-            div[class*="user-welcoming"] {
+            div[class~="user-welcoming"] {
 
                 >span {
                     text-wrap: nowrap;
@@ -51,7 +51,7 @@
             }
         }
 
-        div[class*="pong-player-vector"] {
+        div[class~="pong-player-vector"] {
             position: absolute;
             right: 0px;
             bottom: 0px;
